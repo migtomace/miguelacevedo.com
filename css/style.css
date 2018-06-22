@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    /*prevent text from highlighting*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+
+
+
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+    body {
+        background: #331100;
+        color: beige;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        font-family: 'Libre Baskerville', serif;
+        padding: 0 2em;
+    }
+
+    /*container for the three views nav, main, aside*/
+    .container {
+        display: flex;
+    }
+
+    #title {
+        font-family: 'Marcellus SC', serif;
+        font-size: 3em;
+        padding: 0.6em;
+        color: white;
+        width: 100vw;
+        text-align: center;
+        display: block;
+    }
+
+    footer {
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        padding-bottom: 2em;
+        color: beige;
+        letter-spacing: 3px;
+    }
+
+    footer a {
+        color: beige;
+        text-decoration: none;
+        letter-spacing: 3px;
+    }
+
+    footer a:hover {
+        color: #ffffff;
+    }
+
+    /* -----begin form styles-------------------------------------------------------------*/
+    div#contact {
+        width: 100%;
+    }
+    form {
+        margin: auto;
+        padding: 1em;
+        background: #ededed;
+        border-radius: 25px;
+        font-family: 'Abhaya Libre', serif;
+        width: 400px;
+        -webkit-box-shadow: 4px 10px 20px #000;
+        -moz-box-shadow: 4px 10px 20px #000;
+        box-shadow: 4px 10px 20px #000;
+    }
+    .row {
+        display: flex;
+        padding: 1em 0;
+    }
+    .row input {
+        padding: 2px;
+        margin: 0 2em;
+        flex: 1;
+        border-radius: 5px;
+    }
+    .row input::placeholder {
+        padding: 1em;
+        font-size: 1.3em;
+        font-family: 'Abhaya Libre', serif;
+    }
+    .row textarea {
+        width: inherit;
+        border-radius: 5px;
+        margin: auto;
+    }
+
+    .row input[type="submit"], .row input[type="reset"] {
+        background: #331100;
+        color: beige;
+        -webkit-box-shadow: 4px 10px 20px #000;
+        -moz-box-shadow: 4px 10px 20px #000;
+        box-shadow: 4px 10px 20px #000;
+        border: none;
+    }
+    .row input[type="submit"]:hover, .row input[type="reset"]:hover {
+        background: beige;
+        color: #331100;
+        -webkit-box-shadow: 4px 10px 15px #000;
+        -moz-box-shadow: 4px 10px 15px #000;
+        box-shadow: 4px 10px 15px #000;
+    }
+
+
+
+    /*begin styles to external links----------------------------------------------------------*/
+    aside {
+        margin: 2em 0;
+        color: #FFB29F;
+        position: relative;
+        font-size: 2em;
+        white-space: pre-wrap;
+        flex:1;
+        height: 80vh;
+    }
+
+    aside #in {
+        position: absolute;
+        bottom: 11em;
+        left: 1em;
+    }
+
+    aside #doc {
+        position: absolute;
+        bottom: 8em;
+        left: 1em;
+    }
+
+    aside #github {
+        position: absolute;
+        bottom: 5em;
+        left: 1em;
+    }
+
+    aside a {
+        color: beige;
+    }
+
+    /*----begin main section styles----------------------------------------------------*/
+    main {
+        margin: 2em 0;
+        float: right;
+        height: 100%;
+        flex: 6;
+        color: #fff;
+        align-items: center;
+        display: flex;
+    }
+
+    #hoverGit, #hoverResume, #hoverIn {
+        color: beige;
+        text-decoration: underline;
+    }
+
+    div section {
+        text-align: left;
+        font-family: 'Marcellus SC', serif;
+        font-size: 1.8em;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        padding-right: 3em;
+    }
+
+    div p {
+        text-align: center;
+        font-family: 'Marcellus SC', serif;
+        font-size: 1.8em;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        padding-top: 1em;
+    }
+
+    div#about img, div#projects img {
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        float: left;
+        width: 40%;
+        margin-right: 2em;
+        -webkit-box-shadow: 4px 10px 20px #000;
+        -moz-box-shadow: 4px 10px 20px #000;
+        box-shadow: 4px 10px 20px #000;
+    }
+
+    /*begin left nav styles------------------------------------------------------------*/
+    nav {
+        color: beige;
+        position: relative;
+        font-size: 1.5em;
+        white-space: pre-wrap;
+        flex:1;
+        align-items:center;
+        height: 100%;
+    }
+    nav i {
+        padding: 1em;
+    }
+    nav i:nth-child(2), nav i:nth-child(3), nav i:nth-child(4) {
+        border: 2px solid beige;
+        border-radius: 50%;
+        padding: 1em;
+        margin: 1em 0;
+
+    }
+    nav i:nth-child(2):hover, nav i:nth-child(3):hover, nav i:nth-child(4):hover {
+        box-shadow: -2px 2px 10px #fff;
+    }
+    nav i:nth-child(1):hover, nav i:nth-child(5):hover, aside a:hover {
+        text-shadow:  -1px 2px 10px #fff;
+    }
+
+    /*style animations---------------------------------------------------------------------------*/
+    #anime {
+        position: absolute;
+        padding-top: 10%;
+        padding-left: 2%;
+        width: 100vw;
+        height: 100vh;
+        font-size: 3em;
+        background: #331100;
+        font-family: 'Monoton', cursive;
+        z-index: 1;
+    }
+    .first {
+        color: orange;
+        display: inline-block;
+        margin: 1em;
+        letter-spacing: 2px;
+    }
+    .second {
+        color: #ffffff;
+        display: inline-block;
+        margin: 1em;
+    }
+    .third {
+        color: #ffffff;
+        display: inline-block;
+        margin: 1em;
+    }
+    .fourth {
+        color: green;
+        display: inline-block;
+        margin: 1em;
+    }
+    .fifth {
+        color: orange;
+        display: inline-block;
+        margin: 1em;
+    }
+
+}
+
+
+
+
